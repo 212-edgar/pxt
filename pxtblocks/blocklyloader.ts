@@ -1241,7 +1241,7 @@ namespace pxt.blocks {
         Blockly.Blocks['device_random'] = {
             init: function () {
                 this.jsonInit({
-                    "message0": lf("pick random 0 to %1"),
+                    "message0": lf("pick random from 0 to %1"),
                     "args0": [
                         {
                             "type": "input_value",
