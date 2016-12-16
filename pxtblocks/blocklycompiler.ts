@@ -501,11 +501,17 @@ namespace pxt.blocks {
     // Expressions are now directly compiled as a tree. This requires knowing, for
     // each property ref, the right value for its [parent] property.
     ///////////////////////////////////////////////////////////////////////////////
+    function parseNumber(n: string): number {
+        const parseFn = pxt.appTarget.compile.floatingPoint 
+            ? parseFloat : parseInt;
+        const parsed = parseFn(n);
+        checkNumber(parsed);
+        return parsed;
+    }
 
     function extractNumber(b: B.Block): number {
-        let v = b.getFieldValue("NUM");
-        const parsed = parseFloat(v);
-        checkNumber(parsed);
+        const v = b.getFieldValue("NUM");
+        const parsed = parseNumber(v);
         return parsed;
     }
 
@@ -592,8 +598,7 @@ namespace pxt.blocks {
     function extractNumberLit(e: JsNode): number {
         if (e.type != NT.Prefix || !/^-?\d+$/.test(e.op))
             return null
-        const parsed = parseInt(e.op);
-        checkNumber(parsed);
+        const parsed = parseNumber(e.op);
         return parsed;
     }
 
