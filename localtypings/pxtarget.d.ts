@@ -30,6 +30,7 @@ declare namespace pxt {
         runtime?: RuntimeOptions;
         compile: ts.pxtc.CompileTarget;
         serial?: AppSerial;
+        bluetooth?: AppBluetooth;
         appTheme: AppTheme;
         compileService?: TargetCompileService;
         analytics?: AppAnalytics;
@@ -70,6 +71,10 @@ declare namespace pxt {
         manufacturerFilter?: string; // used by node-serial
         nameFilter?: string; // regex to match devices
         log?: boolean;
+    }
+
+    interface AppBluetooth {
+        uart?: boolean;
     }
 
     interface AppCloud {
