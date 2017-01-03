@@ -7,6 +7,7 @@
     "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#717a5fdb079f8dd7c19f1b22f7f656dd990f0ccf",
     "react-dom": "github:DefinitelyTyped/DefinitelyTyped/react/react-dom.d.ts#717a5fdb079f8dd7c19f1b22f7f656dd990f0ccf",
     "marked": "github:DefinitelyTyped/DefinitelyTyped/marked/marked.d.ts#418e6719c3d9444629dea0d27bebf9cfda9c6c45",
+    "web-bluetooth/index": "registry:dt/web-bluetooth/index#0.0.0+20161003201019",
     "highlightjs": "github:DefinitelyTyped/DefinitelyTyped/highlightjs/highlightjs.d.ts#7de6c3dd94feaeb21f20054b9f30d5dabc5efabd",
     "winrt": "github:DefinitelyTyped/DefinitelyTyped/winrt/winrt.d.ts#ec9eb4b28c74665a602c22db3457f0a76fa0fa23"
   }
